@@ -1,0 +1,235 @@
+@import "vars"
+@import "fonts"
+body
+	margin: 0
+	padding: 0
+*
+	box-sizing: border-box
+body.link_ai__no-scroll
+	overflow: hidden
+.link_ai__hidden_block
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 999
+	background-color: transparent
+	overflow: auto
+	transition: transform .3s ease
+	transform: scale(0)
+	display: none
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	&.active
+		display: block
+		transform: scale(1)
+		background-color: rgba(#000, .8)
+.link_ai__main-body-form
+	opacity: 0
+	position: relative
+	z-index: 9999999
+	width: 80%
+	max-width: 600px
+	background-color: #E5E5E5
+	margin: 120px auto 20px
+.link_ai__main-body-form.active
+	animation: fade-in-top 0.6s 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+
+@keyframes fade-in-top
+	0%
+		transform: translateY(-50px)
+		opacity: 0
+
+	100%
+		transform: translateY(0)
+		opacity: 1
+.link_ai__show-modal
+	position: fixed
+	right: -77px
+	bottom: 50%
+	background-color: $blue
+	color: #fff
+	font-size: 16px
+	text-transform: uppercase
+	font-family: $Roboto
+	padding: 18px 32px
+	display: inline-block
+	border: none
+	outline: none
+	cursor: pointer
+	transform: translateY(50%) rotate(-90deg)
+	transition: all .2s ease
+	&:hover
+		background-color: darken($blue, 10%)
+.link_ai__form
+	padding: 66px 27px 51px
+	text-align: center
+	position: relative
+	input, textarea
+		background: #FBFBFB
+		border: 1px solid #E5E5E5
+		display: block
+		width: 100%
+		padding: 16px 26px
+		font-size: 18px
+		color: $text
+		margin-bottom: 22px
+		&::placeholder
+			font-size: 18px
+			color: $text
+			font-family: $font
+		&:focus
+			outline: none
+			box-shadow: 0px 0px 6px 0px rgba($blue, .3)
+		&:hover
+			outline: none
+			box-shadow: 0px 0px 6px 0px rgba($blue, .3)
+	textarea
+		height: 171px
+.link_ai__form-title
+	margin: 0
+	font-family: $font
+	font-size: 18px
+	line-height: 1.5
+	font-weight: bold
+	text-transform: uppercase
+	color: $text
+	margin-bottom: 12px
+.link_ai__form-subtitle
+	margin: 0
+	font-family: $font
+	font-size: 16px
+	line-height: 1.5
+	font-weight: 400
+	color: $text
+	margin-bottom: 40px
+.link_ai__border-wrapper
+	padding: 1px
+	background-color: #fff
+	border: 1px solid $blue
+.link_ai__btn
+	position: relative
+	display: block
+	width: 100%
+	margin: 0 auto
+	padding: 1px
+	background-color: #fff
+	color: #fff
+	border: 1px solid $blue
+	text-transform: uppercase
+	line-height: 1.5
+	letter-spacing: 1px
+	font-size: 20px
+	font-weight: bold
+	cursor: pointer
+	span
+		background-color: $blue
+		color: #fff
+		display: block
+		padding: 17px
+		transition: background-color .2s ease
+	&:hover
+		span
+			background-color: darken($blue, 10%)
+	&:focus
+		outline: none
+		span
+			background-color: darken($blue, 10%)
+	&:active
+		transform: translateY(1px)
+
+.link_ai__popapClose
+	background-color: transparent
+	width: 20px
+	height: 20px
+	position: absolute
+	top: 24px
+	right: 24px
+	padding: 0
+	border: none
+	outline: none
+	cursor: pointer
+	z-index: 5
+	&:focus
+		outline: none
+	&::before, &::after
+		content: ''
+		display: block
+		width: 25px
+		height: 2px
+		background-color: #555555
+		position: absolute
+		left: 0
+		top: 17px
+	&::after
+		transform: rotate(45deg)
+	&::before
+		transform: rotate(-45deg)
+.link_ai__error
+	box-shadow: 0px 0px 4px 1px rgba($red, .5)
+.link_ai__form__input-wrapper
+	position: relative
+.link_ai__form-status
+	position: relative
+	min-height: 21px
+	margin: 9px 0 21px
+	p
+		margin: 0
+		color: $red
+		font-family: $font
+		font-size: 12px
+		letter-spacing: 1px
+		line-height: 1.5
+		text-align: left
+	&--succes
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-color: #fff
+		z-index: 2
+		margin: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: transform .5s ease
+		transform: scale(0)
+		&--active
+			transform: scale(1)
+
+		p
+			color: $blue
+			font-size: 30px
+			font-weight: bold
+			line-height: 1.5
+			padding: 36px 60px
+			position: relative
+			text-align: center
+			font-family: $font
+			text-transform: uppercase
+			&::before, &::after
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				margin-left: -68px
+				width: 126px
+				height: 2px
+				background-color: $blue
+			&::before
+				top: 0
+			&::after
+				bottom: 0
+
+
+
+
+
+@import "media"
+
+
+
+	
